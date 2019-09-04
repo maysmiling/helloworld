@@ -23,5 +23,5 @@ steps:
     azureSubscription: 'FunctionDevOpsTest'
     appType: 'functionApp'
     appName: 'mayfunc'
-    package: '''$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'''
+    package: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     deploymentMethod: 'auto'
