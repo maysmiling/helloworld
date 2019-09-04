@@ -24,4 +24,4 @@ steps:
     azureSubscription: 'FunctionDevOpsTest'
     appType: 'webApp'
     WebAppName: 'dotnetforyanna'
-    packageForLinux: '$(System.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
