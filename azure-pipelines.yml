@@ -8,7 +8,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'VS2017-Win2016'
 
 steps:
 - task: ArchiveFiles@2
@@ -22,5 +22,5 @@ steps:
     azureSubscription: 'FunctionDevOpsTest'
     appType: 'functionApp'
     appName: 'mayfunc'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(System.DefaultWorkingDirectory)/*.zip'
     deploymentMethod: 'auto'
