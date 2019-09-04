@@ -18,9 +18,10 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-
-- task: AzureRmWebAppDeployment@3
+- task: AzureRmWebAppDeployment@4
   inputs:
-    azureSubscription: 'WebJobsDemoConnection'
-    WebAppName: 'WebAppPython'
-    Package: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip 
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'FunctionDevOpsTest'
+    appType: 'webApp'
+    WebAppName: 'dotnetforyanna'
+    packageForLinux: '$(System.ArtifactStagingDirectory)/$(Build.BuildId).zip'
